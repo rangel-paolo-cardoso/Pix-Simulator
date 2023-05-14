@@ -124,7 +124,7 @@ public abstract class PixError extends Exception {
 When implementing the `PixProcessor.executePix` method, you must follow these steps:
 
 - Ensure that `value` (in cents) is a positive integer.
-     - Otherwise, throw an `ErrorNoPositiveValue` exception.
+     - Otherwise, throw an `NoPositiveValueError` exception.
 - Ensure that the String `key` is not blank.
      - A String will be considered blank if it is empty or composed only of white spaces.
      - If the key is blank, throw `BlankKeyError` exception.
@@ -149,8 +149,8 @@ These codes are defined in the `ReturnCodes` class, which will be available to y
 public class ReturnCodes {
 
    public static final String SUCCESS = "success";
-   public static final String SALDO_INSUFFICIENTE = "insufficient_balance";
-   public static final String CHAVE_PIX_NAO_ENCONTRADA = "key_pix_not_found";
+   public static final String INSUFFICIENTE_BALANCE = "insufficient_balance";
+   public static final String PIX_KEY_NOT_FOUND = "pix_key_not_found";
 }
 ```
 
