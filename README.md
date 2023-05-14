@@ -74,7 +74,7 @@ public class PixController {
      this.pixProcessor = pixProcessor;
    }
 
-   public String whenConfirmingKey(int value, String key) {
+   public String whenConfirmingPix(int value, String key) {
      return null; // TODO: Implement.
    }
 }
@@ -101,19 +101,19 @@ Communication errors are equivalent to exceptions derived from `java.io.IOExcept
 
 As for application errors, there are no exceptions that represent them in the standard library. So let's create _custom exceptions_. You must create the following classes:
 
-- `ErrorNoPositiveValue`
+- `NoPositiveValueError`
 - `BlankKeyError`
 - `InsufficientBalanceError`
-- `ErrorKeyNotFound`
+- `KeyNotFoundError`
 - `InternalError`
 
-As part of the project, you must use _exactly_ the names above to ensure delivery is in line with requirements. In addition, each of the above classes must extend the `ErroDePix` class, whose code follows below:
+As part of the project, you must use _exactly_ the names above to ensure delivery is in line with requirements. In addition, each of the above classes must extend the `PixError` class, whose code follows below:
 
 - `PixError.java`
 ```java
-public abstract class ErrorOfPix extends Exception {
+public abstract class PixError extends Exception {
 
-   public ErrorOfPix(String message) {
+   public PixError(String message) {
      super(message);
    }
 }
