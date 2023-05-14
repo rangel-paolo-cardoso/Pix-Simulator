@@ -38,7 +38,7 @@ import java.io.IOException;
 
 public interface Server {
 
-   Connection openConexao() throws IOException;
+   Connection openConnection() throws IOException;
 }
 ```
 
